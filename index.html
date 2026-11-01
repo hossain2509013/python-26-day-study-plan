@@ -1,17 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>26-Day Python Plan</title>
-    <meta name="description" content="Interactive 26-day Python study plan: CodeWithHarry course plus the week beyond the video." />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,520;9..144,640&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="./app.js"></script>
-  </body>
-</html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>26-Day Python Plan</title></head>
+<body><p style="font-family:system-ui;padding:2rem">Loading study plan…</p>
+<script type="module">
+import {g0} from "./g0.js";
+import {g1} from "./g1.js";
+import {g2} from "./g2.js";
+const b64 = g0+g1+g2;
+const bin = Uint8Array.from(atob(b64), c => c.charCodeAt(0));
+const ds = new DecompressionStream("gzip");
+const stream = new Blob([bin]).stream().pipeThrough(ds);
+const buf = await new Response(stream).arrayBuffer();
+const html = new TextDecoder().decode(buf);
+document.open(); document.write(html); document.close();
+</script></body></html>
