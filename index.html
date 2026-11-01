@@ -1,51 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>26-Day Python Plan</title>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,520;9..144,640&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet"/>
-<style>
-:root{--ink:#1c2430;--navy:#10243f;--navy-soft:#1b3558;--paper:#f4efe4;--sheet:#fbf7f0;--copper:#c45c26;--copper-soft:#f6e6d8;--note:#f4e7c3;--line:#d8d0c3;--muted:#5c6560;--display:Fraunces,Georgia,serif;--sans:"Source Sans 3",system-ui,sans-serif}
-*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.55}
-a{color:var(--navy)}.topbar{position:sticky;top:0;z-index:20;background:var(--navy);color:var(--paper)}
-.topbar-inner{max-width:48rem;margin:0 auto;padding:.75rem 1rem;display:flex;align-items:center;gap:.75rem}
-.topbar a{color:var(--paper);text-decoration:none;font-family:var(--display);font-size:1.1rem}
-.topbar select{max-width:45%;background:var(--navy-soft);color:var(--paper);border:1px solid var(--navy-soft);padding:.3rem}
-.progress-track{flex:1;height:.35rem;background:var(--navy-soft);border-radius:2px;overflow:hidden}
-.progress-fill{height:100%;background:var(--copper);width:0}
-.wrap{max-width:48rem;margin:0 auto;padding:2rem 1rem 4rem}
-.kicker{font-size:.85rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--copper);margin:0}
-h1{font-family:var(--display);font-size:clamp(2rem,5vw,3.2rem);line-height:1.05;color:var(--navy);margin:.35rem 0 0}
-.callout{margin-top:1rem;border-left:4px solid var(--copper);background:var(--sheet);padding:.85rem 1rem}
-.checklist{list-style:none;padding:0;margin:.75rem 0 0;border:1px solid var(--line);background:var(--sheet)}
-.checklist li{border-top:1px solid var(--line)}.checklist li:first-child{border-top:0}
-.checklist label{display:flex;gap:.75rem;align-items:flex-start;padding:.75rem;cursor:pointer}
-.box{flex-shrink:0;width:1.2rem;height:1.2rem;margin-top:.15rem;border:1px solid var(--navy);display:flex;align-items:center;justify-content:center;color:transparent;font-size:.7rem;font-weight:700}
-.checklist input:checked+.box{background:var(--navy);color:var(--paper)}
-.checklist input:checked~.lab{color:var(--muted);text-decoration:line-through}
-.day-list{list-style:none;padding:0;margin:1rem 0 0;border:1px solid var(--line);background:var(--sheet)}
-.day-list a{display:grid;grid-template-columns:auto 1fr auto;gap:.75rem;align-items:center;padding:.85rem 1rem;text-decoration:none;color:inherit;border-top:1px solid var(--line)}
-.day-list a:first-child{border-top:0}.day-list a:hover{background:var(--copper-soft)}
-.day-num{font-family:var(--display);font-weight:640;color:var(--navy);min-width:2.2rem}
-.day-title{font-weight:600}.day-meta{font-size:.85rem;color:var(--muted)}
-.section{margin-top:2rem}.copper-box{background:var(--copper-soft);border:1px solid var(--copper);padding:1rem;margin:.75rem 0}
-.note-box{background:var(--note);border:1px solid var(--line);padding:1rem;margin:.75rem 0}
-.field{display:block;margin:.75rem 0}.field span{display:block;font-size:.85rem;font-weight:600;margin-bottom:.25rem}
-.field textarea{width:100%;padding:.5rem;border:1px solid var(--line);background:var(--sheet);font-family:inherit;resize:vertical}
-.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
-@media (max-width:480px){.topbar-inner{flex-wrap:wrap}.topbar select{max-width:100%}}
-</style>
-</head>
-<body>
-<div class="topbar"><div class="topbar-inner">
-<a href="#/">26-Day Python</a>
-<div class="progress-track"><div class="progress-fill" id="prog"></div></div>
-<select id="dayJump" aria-label="Jump to day"></select>
-</div></div>
-<div class="wrap" id="app">Loading…</div>
-<script>
-/* FULL APP EMBEDDED - see source for plan data and logic */
-</script>
-</body>
-</html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>26-Day Python Plan</title></head>
+<body><p style="font-family:system-ui;padding:2rem">Loading study plan…</p>
+<script type="module">
+import {c0} from "./c0.js";
+import {c1} from "./c1.js";
+import {c2} from "./c2.js";
+import {c3} from "./c3.js";
+import {c4} from "./c4.js";
+import {c5} from "./c5.js";
+import {c6} from "./c6.js";
+import {c7} from "./c7.js";
+import {c8} from "./c8.js";
+import {c9} from "./c9.js";
+import {c10} from "./c10.js";
+import {c11} from "./c11.js";
+const b64 = c0+c1+c2+c3+c4+c5+c6+c7+c8+c9+c10+c11;
+const bin = Uint8Array.from(atob(b64), c => c.charCodeAt(0));
+const ds = new DecompressionStream("gzip");
+const stream = new Blob([bin]).stream().pipeThrough(ds);
+const buf = await new Response(stream).arrayBuffer();
+const html = new TextDecoder().decode(buf);
+document.open(); document.write(html); document.close();
+</script></body></html>
